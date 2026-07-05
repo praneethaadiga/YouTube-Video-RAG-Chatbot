@@ -1,0 +1,12 @@
+streamlit
+langchain
+langchain-community
+faiss-cpu
+sentence-transformers
+youtube-transcript-api
+transformers
+torch
+accelerate
+pandas
+numpy
+ollama
