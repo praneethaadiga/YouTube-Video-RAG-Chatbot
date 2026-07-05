@@ -1,13 +1,22 @@
 import streamlit as st
 import os
 import json
-from utils.youtube_loader import YouTubeLoader
+
 from utils.helper import extract_video_id
 from utils.chunking import TranscriptChunker
 from utils.embeddings import EmbeddingGenerator
 from utils.vector_db import VectorDatabase
 from utils.rag import RAG
+from utils.youtube_loader import YouTubeLoader
+import utils.youtube_loader
 
+import utils.youtube_loader
+
+st.write("Loaded youtube_loader from:")
+st.code(utils.youtube_loader.__file__)
+
+print("Loaded from:")
+print(utils.youtube_loader.__file__)
 
 # -----------------------------
 # Page Configuration
@@ -91,7 +100,9 @@ if st.button("📥 Load Video"):
         with st.spinner("Downloading transcript..."):
 
             loader = YouTubeLoader()
-
+            st.write(type(loader))
+            st.write(loader.__dict__)
+            # st.write(loader.preferred_languages)
             transcript_path = loader.save_transcript(
                 youtube_url
             )
