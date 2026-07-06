@@ -100,8 +100,8 @@ if st.button("📥 Load Video"):
         with st.spinner("Downloading transcript..."):
 
             loader = YouTubeLoader()
-            st.write(type(loader))
-            st.write(loader.__dict__)
+            # st.write(type(loader))
+            # st.write(loader.__dict__)
             # st.write(loader.preferred_languages)
             transcript_path = loader.save_transcript(
                 youtube_url
